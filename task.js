@@ -2,18 +2,18 @@
 
 "use strict";
 
-// let arrNum = [3 , 4, 7 , 9 , 12 , 23 , 18 , 27 , 30]
-// let evenSum = 0;
+let arrNum = [3 , 4, 7 , 9 , 12 , 23 , 18 , 27 , 30]
+let evenSum = 0;
 
-// // for(let i=0;i<arrNum.length;i++){
-// //     console.log(typeof(i),arrNum[i])
-// //     if(arrNum[i] % 2 ==0){
-// //         evenSum = evenSum + arrNum[i]
-// //         console.log(typeof (evenSum))
-// //         console.log(typeof(arrNum[i]))
-// //     }
-// //    }
-// //   console.log(evenSum);
+for(let i=0;i<arrNum.length;i++){
+    console.log(typeof(i),arrNum[i])
+    if(arrNum[i] % 2 ==0){
+        evenSum = evenSum + arrNum[i]
+        console.log(typeof (evenSum))
+        console.log(typeof(arrNum[i]))
+    }
+   }
+  console.log(evenSum);
 
 // // for( let i of arrNum){
 // //     if(i % 2 ==0)
@@ -66,6 +66,15 @@ console.log(square_of_Array);
 
 //  4. Write a function that takes an array of objects where each object has a 'name' property and returns a new
 //    array that contains only the names of the objects
+let students = [
+    { firstName: "Hari" },
+    { firstName: "Shyam" },
+    { firstName: "Ram" },
+    { firstName: "Mina" },
+  ];
+   
+  let namedStudents = students.map((names_of_students)=>names_of_students.firstName)
+  console.log(namedStudents)
 
 // let students = [{firstName:"Hari",marks:50}, {firstName:"Shyam",marks:40}, {firstName:"Ram",marks:50}, {firstName:"Mina",marks:35}]
 
@@ -74,10 +83,7 @@ console.log(square_of_Array);
 
 let girls = ["Mina", "Dipa", "Rita"];
 
-// console.log(girls)
-// let count = 1;
-//  let new_girsl_array =
-//        for(girls[i]=0;)
+
 
 // //  //6. Write a function that takes an array of objects, where each object has a "name" and "age" property, and returns a new array that contains only the names of the objects sorted by their age, from youngest to oldest.
 
@@ -136,3 +142,12 @@ console.log(sortingArray(array_of_age));
 //10. Write a function that takes two arrays of numbers as input and returns a new array
 //where each element is the difference between the corresponding elements of the input arrays.
 //For example, given the input [1, 2, 3] and [4, 2, 1], the function should return [-3, 0, 2].
+
+let firstArr =[1, 2, 3]
+let secondArr = [4,2,1]
+
+let thirdArr = []
+for(let i in firstArr){
+    thirdArr[i] = firstArr[i] - secondArr[i] 
+}
+console.log(thirdArr)
