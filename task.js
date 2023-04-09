@@ -154,3 +154,49 @@ for (let i in firstArr) {
   thirdArr[i] = firstArr[i] - secondArr[i];
 }
 console.log(thirdArr);
+
+// //11. create a javascript class for a stack data structure that allows for pushing and popping elements and also provides method for checking if the stack is empty or full
+
+class stack{
+  constructor(){
+    this.items = [];
+  }
+    add(x){
+       return this.items.push(x);
+
+    }
+    remove(){
+      return this.items.pop();
+    }
+    stackLength(){
+      this.items.length;
+    }
+    peek(){
+      return this.items[this.items.length - 1];
+  }
+  isEmpty(){
+    return this.items.length == 0;
+  }
+  isFull(){
+    if(this.items.length > 0){
+      return this.items
+    }
+    
+  }
+  }
+  let s1 = new stack();
+
+  s1.add(1);
+  s1.add(2);
+  s1.add(3);
+  s1.add(4);
+  console.log(s1.items);
+
+s1.remove();
+console.log(s1.items);
+
+console.log(s1.peek());
+
+console.log(s1.isEmpty());
+
+console.log(s1.isFull());
